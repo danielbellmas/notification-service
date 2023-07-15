@@ -102,7 +102,7 @@ describe('NotificationBl', () => {
     it('should return true if deadline has updated and todo has been notified already', () => {
       const notifiedTodoIdMock = '1';
 
-      const todoMock: Todo = { _id: notifiedTodoIdMock, title: 'title', deadline: getTomorrowDate() };
+      const todoMock: Todo = { _id: notifiedTodoIdMock, title: 'title', deadline: getDateNDaysFromNow(3) };
 
       notificationBl.setNotifiedTodoList([notifiedTodoIdMock]);
 

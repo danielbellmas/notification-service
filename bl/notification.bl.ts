@@ -48,7 +48,7 @@ export class NotificationBl {
 
     const hasBeenNotified = this.notifiedTodoList.includes(todo._id);
 
-    return hasBeenNotified && timeDiff >= config.deadlineBufferTime;
+    return hasBeenNotified && timeDiff > config.deadlineBufferTime;
   }
 
   async sendNotificationHandler() {
